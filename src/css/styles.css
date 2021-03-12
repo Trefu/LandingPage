@@ -1,5 +1,5 @@
 :root {
-  --colorMasClaro: #A2FAA3;
+  --colorMasClaro: rgb(162, 250, 163);
   --colorClaro: #92C9B1;
   --colorMedio: #4F759B;
   --ColorOscuro: #5D5179;
@@ -13,40 +13,40 @@ body {
   flex-direction: column;
   background-color: var(--ColorMasOscuro);
   font-family: 'Abel', sans-serif;
-
-
 }
 
-header {
-  background-color: transparent;
-  /*var(--colorMedio);*/
-
+#header {
+  background-color: var(--ColorMasOscuro);
 }
 
 .nav-link {
   color: var(--colorMasClaro) !important;
   border-radius: 3rem;
-
+  text-align: center;
 }
 
 .nav-link:hover {
   color: var(--colorMedio);
   background-color: var(--colorMedio);
-
 }
-
-
 
 #header-img {
   width: 3rem;
 }
 
 .custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(162,250,162, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+
+}
+
+#bsToggler {
+  background-color: var(--ColorOscuro);
+
 }
 
 .background-guitar {
   position: relative;
+  background-image: url(/assets/background.jpg);
   background-image: url(/src/assets/background.jpg);
   height: 100vh;
   background-size: cover;
@@ -83,11 +83,21 @@ header {
   color: rgba(216, 216, 216, 0.864);
 }
 
-#formulario :nth-child(1n) {
+#form :nth-child(1n) {
   margin: 1rem;
 
 }
 
-#formInput {
+#email {
+
   max-width: 16rem;
+}
+
+@media only screen and (min-width: 576px) {
+  #header {
+
+    background-color: transparent;
+    /*var(--colorMedio);*/
+
+  }
 }
