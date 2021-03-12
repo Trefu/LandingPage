@@ -1,171 +1,34 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --colorMasClaro: #A2FAA3;
+  --colorClaro: #92C9B1;
+  --colorMedio: #4F759B;
+  --ColorOscuro: #5D5179;
+  --ColorMasOscuro: #571F4E;
+  font-size: 16px;
+
 }
 
 body {
-
-  font-family: 'Lato', sans-serif;
-  position: relative;
-
-}
-
-main {
-  padding-top: 1.5cm;
-
-}
-
-/* icono de la barra de nav */
-#header-img {
-  width: 30px;
-  height: auto;
-  border-radius: 50%;
-  position: absolute;
-  display: block;
-  top: 5px;
-  right: 5px;
-  overflow: hidden;
-
-}
-
-/* "menu" */
-
-#nav {
-  background-color: black;
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  position: fixed;
-}
-
-#nav li {
-  display: inline-block;
-}
-
-#nav li a {
-  padding: 10px 20px;
-  display: inline-block;
-  color: white;
-}
-
-#nav li a:hover {
-  background-color: white;
-  color: black;
-}
-
-/* nav bar */
-
-h1 {
-  text-align: center;
-}
-
-.descripcion h2 {
-  display: block;
-  color: red;
-}
-
-
-.grid {
   display: flex;
-  justify-content: center;
-
-
-}
-
-.icon {
-  display: flex;
-  height: 125px;
-  width: 20vw;
-
-}
-
-.iconos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 50px;
-
-}
-
-.descripcion {
   flex-direction: column;
-  justify-content: center;
+  background-color: var(--ColorMasOscuro)
+}
 
+header {
+  background-color: var(--ColorOscuro);
 
 }
 
-.contenedor-email {
-
-
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  height: 200px;
-}
-
-.contenedor-email form {
-  display: block;
+.nav-link {
+  color: var(--colorMasClaro);
 
 }
 
-.contenedor-email form input {
-  text-align: center;
+.nav-link:hover {
+  color: var(--colorMedio);
+  background-color: var(--colorMasClaro);
 }
 
-#form {
-  width: 25%;
-  margin: 20px;
-  padding: 20px;
-  display: inline-block;
-  text-align: center;
-
-}
-
-
-.contenedor-email form input[type=submit] {
-  /* boton*/
-  max-width: 150px;
-  width: 100%;
-  height: 30px;
-  margin: 10px 0;
-  background-color: #f1c40f;
-  cursor: pointer;
-}
-
-
-.grid {
-  display: block;
-  text-align: center;
-}
-
-
-.box-container {
-  height: 500px;
-  display: flex;
-}
-
-#box1 {
-  max-width: 300px;
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  background-color: red;
-}
-
-#box2 {
-  max-width: 300px;
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  background-color: green;
-}
-
-#box3 {
-  max-width: 300px;
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  background-color: blue;
+nav>div>#header-img {
+  width: 3rem;
 }
