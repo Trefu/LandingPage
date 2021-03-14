@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guitars Landing Page</title>
     <link href="modules/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 </head>
@@ -18,7 +17,7 @@
     <header id="header" class="fixed-top container-fluid ">
         <nav id="nav-bar" class="navbar navbar-expand-md sticky-top ">
             <div class="container-fluid container-md">
-                <a href="#"><img id="header-img" src="/src/assets/logo.png" alt="Brand mark"></a>
+                <a href="#principal"><img id="header-img" src="./assets/logo.png" alt="Brand mark"></a>
                 <button id="bsToggler" class="custom-toggler navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -26,21 +25,29 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link" href="#">Home</a>
-                        <a class="nav-link" href="#">Features</a>
-                        <a class="nav-link" href="#">Pricing</a>
-                        <a class="nav-link" href="#">Disabled</a>
+                        <a class="nav-link" href="#principal">Home</a>
+                        <a class="nav-link" href="#principal">Contact</a>
+                        <a class="nav-link" href="#video">Products</a>
+
                     </div>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <div class="background-guitar text-center mx-auto row">
-            <div class="col my-auto ">
-                <h1 class="display-1">Acoustic Guitars</h1>
-                <p class="h2">Landing page</p>
-                <form id="form" class="form-group p-2">
+        <div id="principal" class="background-guitar text-center align-items-center mx-auto row">
+            <div class="col">
+                <div class="container">
+                    <h1 class="display-1">Acoustic Guitars</h1>
+                    <p class="h2">Landing page</p>
+                    <p class="text-justify text h5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                        vitae
+                        sapiente molestias recusandae
+                        provident blanditiis consequuntur laudantium fugiat? Laborum sapiente ipsum qui minima dolores
+                        officiis officia blanditiis dicta eum quisquam.
+                    </p>
+                </div>
+                <form action="https://www.freecodecamp.com/email-submit" id="form" class="form-group p-md-5">
                     <label for="email" class="h5">Start now</label>
                     <input id="email" placeholder="Example@gmail.com" name="email" type="email"
                         class="form-control mx-auto w-50 text-center">
@@ -48,7 +55,42 @@
                 </form>
             </div>
         </div>
+        <article id="products" class="row text-center container-fluid">
+            <div class="row align-items-center">
+                <div class="col">
+                    <p class="display-1">Our Products</p>
+                </div>
+                <div class="col">
+                    <section>
 
+                        <iframe id="inlineFrameExample" title="Inline Frame Example" width="300" height="200"
+                            src="https://www.youtube.com/watch?v=A3uhsPEPfrk">
+                        </iframe>
+
+                    </section>
+                </div>
+            </div>
+            <div class="row align-items-center py-5">
+                <div class="col-md">
+                    <h1 class="h2">Acoustic Guitars</h1>
+                    <p class="h3">Landing page</p>
+                    <img class="guitarImg" src="./assets/guitar1.png" alt="">
+                </div>
+                <div class="col-md">
+                    <h1 class="h2">Acoustic Guitars</h1>
+                    <p class="h3">Landing page</p>
+                    <img class="guitarImg" src="./assets/guitar2.png" alt="">
+
+                </div>
+                <div class="col-md">
+                    <h1 class="h2">Acoustic Guitars</h1>
+                    <p class="h3">Landing page</p>
+                    <img class="guitarImg" src="./assets/guitar3.png" alt="">
+                </div>
+            </div>
+
+
+        </article>
 
     </main>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
