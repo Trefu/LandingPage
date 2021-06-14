@@ -1,17 +1,16 @@
 :root {
   --colorMasClaro: rgb(162, 250, 163);
-  --colorClaro: #92C9B1;
-  --colorMedio: #4F759B;
-  --ColorOscuro: #5D5179;
+  --colorClaro: #92c9b1;
+  --colorMedio: #4f759b;
+  --ColorOscuro: #5d5179;
   --ColorMasOscuro: rgb(87, 31, 78);
   font-size: 16px;
-
 }
 
 body {
   display: flex;
   flex-direction: column;
-  font-family: 'Abel', sans-serif;
+  font-family: "Abel", sans-serif;
   color: white;
 }
 
@@ -36,23 +35,20 @@ body {
 
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(162,250,162, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-
 }
 
 #bsToggler {
   background-color: var(--ColorOscuro);
-
 }
 
 .background-guitar {
   position: relative;
-  background-image: url(../assets/background.jpg);
+  background-image: url(./assets/background.jpg);
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 5;
-
 }
 
 .background-guitar::before {
@@ -62,8 +58,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(120deg, var(--colorMedio), var(--ColorMasOscuro));
-  opacity: .8;
+  background-image: linear-gradient(
+    120deg,
+    var(--colorMedio),
+    var(--ColorMasOscuro)
+  );
+  opacity: 0.8;
   z-index: -1;
 }
 
@@ -78,13 +78,12 @@ body {
   border-color: var(--colorMasClaro);
 }
 
-.background-guitar>.col>.h3 {
+.background-guitar > .col > .h3 {
   color: rgba(216, 216, 216, 0.864);
 }
 
 #form :nth-child(1n) {
   margin: 1rem;
-
 }
 
 #email {
@@ -93,7 +92,11 @@ body {
 
 #products {
   background: rgb(0, 0, 0);
-  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(118, 118, 118) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgb(118, 118, 118) 100%
+  );
   color: white;
 }
 
@@ -102,11 +105,9 @@ body {
   height: 25rem;
 }
 
-
 @media only screen and (min-width: 768px) {
   #header {
     background-color: transparent;
-
   }
 
   #products {
