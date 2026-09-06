@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo.svg'
 
 const open = ref(false)
 const scrolled = ref(false)
@@ -43,7 +43,7 @@ const links = [
           id="header-img"
           :src="Logo"
           alt="Acoustic Guitars mark"
-          class="h-9 w-9 rounded-full ring-2 ring-amber-glow/70 object-cover"
+          class="h-10 w-10 rounded-full ring-2 ring-amber-glow/60"
         />
         <span class="font-display text-lg font-semibold tracking-wide">
           Treble &amp; Wood

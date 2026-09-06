@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Treble and Wood mark">
+  <defs>
+    <linearGradient id="amberRing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0b94c"/>
+      <stop offset="100%" stop-color="#c98a2b"/>
+    </linearGradient>
+    <linearGradient id="inkBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a160d"/>
+      <stop offset="100%" stop-color="#0c0a05"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="32" cy="32" r="30" fill="url(#amberRing)"/>
+  <circle cx="32" cy="32" r="29.5" fill="none" stroke="#0c0a05" stroke-opacity="0.12" stroke-width="1"/>
+
+  <g transform="rotate(-22 32 38)">
+    <path d="M30 9 H34 V30 Z" fill="url(#inkBody)"/>
+    <rect x="27" y="6" width="10" height="5" rx="1.5" fill="url(#inkBody)"/>
+    <circle cx="29.5" cy="8.5" r="0.9" fill="#f0b94c"/>
+    <circle cx="34.5" cy="8.5" r="0.9" fill="#f0b94c"/>
+
+    <path d="M32 28
+             C 39 28 44 31.5 44 36
+             C 44 39 41 41 39 41
+             C 41 43 43 46 43 49.5
+             C 43 54.5 38 58 32 58
+             C 26 58 21 54.5 21 49.5
+             C 21 46 23 43 25 41
+             C 23 41 20 39 20 36
+             C 20 31.5 25 28 32 28 Z"
+          fill="url(#inkBody)"/>
+
+    <ellipse cx="32" cy="46" rx="4.2" ry="4.2" fill="url(#amberRing)"/>
+    <ellipse cx="32" cy="46" rx="2" ry="2" fill="#0c0a05"/>
+
+    <line x1="29" y1="32" x2="29" y2="56" stroke="#f0b94c" stroke-width="0.35" opacity="0.7"/>
+    <line x1="32" y1="32" x2="32" y2="56" stroke="#f0b94c" stroke-width="0.35" opacity="0.7"/>
+    <line x1="35" y1="32" x2="35" y2="56" stroke="#f0b94c" stroke-width="0.35" opacity="0.7"/>
+  </g>
+</svg>

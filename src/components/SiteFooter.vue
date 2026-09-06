@@ -21,7 +21,6 @@ const year = new Date().getFullYear()
           <li><a class="nav-link" href="#principal">Home</a></li>
           <li><a class="nav-link" href="#products">Products</a></li>
           <li><a class="nav-link" href="#video-section">Demo</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
 
