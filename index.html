@@ -20,6 +20,53 @@
   <body class="bg-ink-900 text-ink-50 font-sans antialiased">
     <div id="app"></div>
     <!--
+      Make sure the freeCodeCamp test-panel's hamburger starts CLOSED on every
+      fresh load. The FCC bundle reads `fCC_<project>_hide` from localStorage
+      on DOMContentLoaded and only then activates the closed visual (bars +
+      panel slid off-screen). The template defaults to the open state and
+      only switches when that storage flag is present. We pre-seed the flag
+      for every known project name so the bundle always boots into CLOSED,
+      regardless of whatever the user did last.
+    -->
+    <script>
+      try {
+        var ls = window.localStorage;
+        var PREFIX = 'fCC_';
+        // Pre-seed the hide flag for every known FCC project name.
+        var PROJECTS = [
+          '',
+          'product-landing-page',
+          'build-a-product-landing-page',
+          'build-a-tribute-page',
+          'build-a-personal-portfolio-webpage',
+          'build-a-survey-form',
+        ];
+        var seen = {};
+        for (var i = 0; i < PROJECTS.length; i++) {
+          var key = PREFIX + PROJECTS[i] + '_hide';
+          ls.setItem(key, 'true');
+          seen[key] = true;
+        }
+        // Also seed the `He = null` project key — when project_selector is
+        // unset, FCC reads `fCC` + null + `_hide`, stringifying to
+        // `fCCnull_hide`.
+        var NULL_KEY = 'fCC' + null + '_hide';
+        ls.setItem(NULL_KEY, 'true');
+        seen[NULL_KEY] = true;
+        // Flip any other fCC_*_hide entries we don't know about too.
+        var all = [];
+        for (var k = 0; k < ls.length; k++) all.push(ls.key(k));
+        for (var m = 0; m < all.length; m++) {
+          if (/^fCC_.*_hide$/.test(all[m]) && !seen[all[m]]) {
+            ls.setItem(all[m], 'true');
+          }
+        }
+        // Force empty-string project_selector so He = '' and the bundle uses
+        // our seeded `fCC__hide` key.
+        ls.setItem('project_selector', '');
+      } catch (_) {}
+    </script>
+    <!--
       freeCodeCamp testable bundle.
       Required for the certified Product Landing Page tests to keep passing.
       All required DOM hooks (#header, #nav-bar, .nav-link, #header-img,

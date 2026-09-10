@@ -143,6 +143,51 @@ test('13. Layout uses Flexbox or CSS Grid (Tailwind utilities)', async () => {
   )
 })
 
+const findHamburgerButton = () => {
+  const byAria = document.querySelector(
+    '#nav-bar button[aria-label="Toggle navigation"]',
+  )
+  if (byAria) return byAria
+  const byExpanded = document.querySelector(
+    '#nav-bar button[aria-expanded]',
+  )
+  return byExpanded
+}
+
+test('14. Hamburger toggle button exists in the navbar', () => {
+  const btn = findHamburgerButton()
+  assert(btn, 'no hamburger button found inside #nav-bar')
+  assert(
+    btn.tagName === 'BUTTON',
+    'hamburger element must be a <button>, got ' + btn.tagName,
+  )
+})
+
+test('15. Hamburger starts closed (aria-expanded="false" on initial render)', () => {
+  const btn = findHamburgerButton()
+  assert(btn, 'no hamburger button found inside #nav-bar')
+  const expanded = btn.getAttribute('aria-expanded')
+  assert(
+    expanded === 'false',
+    'hamburger must start closed (aria-expanded="false"), got "' + expanded + '"',
+  )
+})
+
+test('16. Mobile dropdown menu is not rendered while hamburger is closed', () => {
+  const btn = findHamburgerButton()
+  const expanded = btn && btn.getAttribute('aria-expanded')
+  assert(
+    expanded === 'false',
+    'hamburger must start closed before checking mobile menu',
+  )
+  const lists = document.querySelectorAll('#nav-bar ul')
+  assert(
+    lists.length === 1,
+    'expected exactly 1 <ul> in #nav-bar when hamburger is closed, found ' +
+      lists.length,
+  )
+})
+
 let built = false
 const ensureBuilt = async () => {
   if (built) return
